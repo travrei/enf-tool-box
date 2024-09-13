@@ -1,0 +1,46 @@
+[application]
+
+# App (Project) Name
+name = "enf-tool-box"
+
+# Dioxus App Default Platform
+# web, desktop, fullstack
+default_platform = "web"
+
+# `build` & `serve` dist path
+out_dir = "dist"
+
+# resource (assets) file folder
+asset_dir = "assets"
+
+[web.app]
+
+# HTML title tag content
+title = "enf-tool-box"
+
+[web.watcher]
+
+# when watcher trigger, regenerate the `index.html`
+reload_html = true
+
+# which files or dirs will be watcher monitoring
+watch_path = ["src", "assets"]
+
+# include `assets` in web platform
+[web.resource]
+
+# CSS style file
+
+style = [
+    "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap",
+    "https://fonts.googleapis.com/icon?family=Material+Icons",
+]
+
+# Javascript code file
+script = []
+
+[web.resource.dev]
+
+# Javascript code file
+# serve: [dev-server] only
+script = []
