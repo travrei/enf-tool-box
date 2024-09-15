@@ -6,6 +6,7 @@ use dioxus_logger::tracing::{info, Level};
 use pages::braden::Braden;
 use pages::gerador::Gerador;
 use pages::home::Home;
+use pages::morse::Morse;
 
 mod pages;
 
@@ -15,6 +16,8 @@ enum Route {
     Home {},
     #[route("/braden")]
     Braden {},
+    #[route("/morse")]
+    Morse {},
     #[route("/gerador")]
     Gerador {},
 }
@@ -28,6 +31,10 @@ fn main() {
 
 fn App() -> Element {
     rsx! {
+        meta {
+            name: "viewport",
+            content: "width-device-width, initial-scale=1.0"
+        }
         link { rel: "stylesheet", href: "main.css" }
         Router::<Route> {}
     }

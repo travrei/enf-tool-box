@@ -15,7 +15,7 @@ pub fn Home() -> Element {
                 Link { to: Route::Braden {},
                     a { class: "button", "Braden" }
                 }
-                Link { to: Route::Braden {},
+                Link { to: Route::Morse {},
                     a { class: "button", "Morse" }
                 }
                 Link { to: Route::Braden {},

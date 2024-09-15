@@ -11,7 +11,7 @@ pub fn Braden() -> Element {
     let mut show_mob = use_signal(|| false);
     let mut show_nut = use_signal(|| false);
     let mut show_fric = use_signal(|| false);
-    let mut risco: String;
+    let risco: String;
 
     match total() {
         0 => risco = "Sem Resultado".to_string(),
@@ -43,10 +43,6 @@ pub fn Braden() -> Element {
                 }
             }
             div { class: "items",
-                button { class: "button", onclick: move |_| show_percep.set(true),
-                    span { class: "icons material-icons", "touch_app" }
-                    "Percepção Sensorial"
-                }
                 if show_percep() {
                     button {
                         class: "opcoes_fundo",
