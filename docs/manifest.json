@@ -1,0 +1,9 @@
+{
+    "name": "NurseKit",
+    "short_name": "NurseKit",
+    "start_url": "/",
+    "display": "standalone",
+    "icons": {},
+    "theme_color": "#456731",
+    "background_color": "#e0e4d6"
+}
