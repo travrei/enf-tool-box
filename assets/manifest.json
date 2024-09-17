@@ -1,7 +1,7 @@
 {
     "name": "NurseKit",
     "short_name": "NurseKit",
-    "start_url": "/",
+    "start_url": "/enf-tool-box",
     "display": "standalone",
     "icons": [
         {
