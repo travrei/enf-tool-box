@@ -47,5 +47,9 @@
     ],
     "theme_color": "#456731",
     "background_color": "#e0e4d6",
-    "prefer_related_applications": false
+    "prefer_related_applications": false,
+    "id": "travrei.nursekit",
+    "description": "Um Programa para Enfermeiros",
+    "lang": "pt",
+    "orientation": "portrait"
 }
