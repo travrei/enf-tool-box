@@ -3,10 +3,10 @@
 use dioxus::prelude::*;
 use dioxus_logger::tracing::{info, Level};
 
-use dioxus_router::routable;
 use pages::braden::Braden;
 use pages::fugulin::Fugulin;
 use pages::gerador::Gerador;
+use pages::glasgow::Glasgow;
 use pages::home::Home;
 use pages::morse::Morse;
 
@@ -22,6 +22,8 @@ enum Route {
     Morse {},
     #[route("/fugulin")]
     Fugulin {},
+    #[route("/glasgow")]
+    Glasgow {},
     #[route("/gerador")]
     Gerador {},
 }
