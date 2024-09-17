@@ -11,6 +11,11 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  <script>
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+  }
+</script>
   <div id="main"></div>
   <script type="module">
     import init from "/enf-tool-box/assets/dioxus/NurseKit.js";
