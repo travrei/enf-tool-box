@@ -5,6 +5,7 @@ use crate::Route;
 #[component]
 pub fn Home() -> Element {
     let mut show_referencias = use_signal(|| false);
+    let mut show_cafe = use_signal(|| false);
 
     rsx! {
         div { class: "container",
@@ -18,12 +19,21 @@ pub fn Home() -> Element {
                 Link { to: Route::Fugulin {}, class: "button", "Fugulin" }
                 Link { to: Route::Glasgow {}, class: "button", "Glasgow" }
                 Link { to: Route::Home {}, class: "button disable", "Gerador de Evolução (Em Breve)" }
+                Link { to: Route::Home {}, class: "button disable", "Diagnósticos de Enfermagem (Em Breve)" }
             }
-            div {
+            div { class: "footitens",
                 button {
                     class: "button_sec",
                     onclick: move |_| show_referencias.set(true),
+                    span { class: "icons material-icons", "manage_search" }
                     "Referências"
+
+                }
+                button {
+                    class: "button_sec",
+                    onclick: move |_| show_cafe.set(true),
+                    "Compre-me um Café"
+                    span { class: "icons material-icons", "local_cafe" }
                 }
             }
             if show_referencias() {
@@ -53,6 +63,20 @@ pub fn Home() -> Element {
                                 "https://www2.ufjf.br/neurologia/2018/12/11/escala-de-coma-de-glasgow-importancia-e-atualizacao-de-2018"
                             }
                         }
+                    }
+                }
+
+            }
+            if show_cafe() {
+                button {
+                    class: "opcoes_fundo",
+                    onclick: move |_| show_cafe.set(false)
+                }
+                div { class: "opcoes_window",
+                    div {
+                        nav{h1{class:"navtitle","Me Ajude comprando um café!"}}
+                        img{src:"pix.jpeg",alt:"QRCode do pix", width:"300px", height:"450px"}
+                        div{p{"00020126390014br.gov.bcb.pix0117qjogos7@gmail.com5204000053039865802BR5925Andrei Esteves Dos Reis B6009Sao Paulo62070503***63044ABC"}}
                     }
                 }
             }

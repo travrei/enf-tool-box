@@ -8,6 +8,10 @@ body {
     margin: 0;
 }
 
+img {
+    align-self: center;
+}
+
 nav {
     background-color: rgb(85 98 76);
     display: flex;
@@ -45,6 +49,7 @@ footer {
     padding: 12px;
     background-color: rgb(248 250 240);
     border-radius: 8px;
+    word-wrap: break-word;
     box-shadow:
         0px 2px 1px -1px rgba(0, 0, 0, 0.2),
         0px 1px 1px 0px rgba(0, 0, 0, 0.14),
@@ -52,7 +57,7 @@ footer {
 }
 
 .title {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
@@ -62,7 +67,7 @@ footer {
 }
 
 .secondary_title {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     color: rgb(25 29 22);
     text-align: center;
     font-size: 1.2rem;
@@ -204,6 +209,12 @@ footer {
     background-color: rgb(224 228 214);
     color: rgb(67 72 62);
     cursor: not-allowed;
+}
+
+.footitens {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 }
 
 @media (max-width: 600px) {

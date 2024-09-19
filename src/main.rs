@@ -45,6 +45,7 @@ fn App() -> Element {
         }
         link { rel: "stylesheet", href: "main.css" }
         link { rel: "manifest", href: "manifest.json" }
+        script { src: "sw.js" }
         Router::<Route> {}
     }
 }
