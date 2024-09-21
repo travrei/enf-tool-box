@@ -6,7 +6,6 @@ name = "NurseKit"
 # Dioxus App Default Platform
 # web, desktop, fullstack
 default_platform = "web"
-base_path = "enf-tool-box"
 
 # `build` & `serve` dist path
 out_dir = "docs"
@@ -18,7 +17,7 @@ asset_dir = "assets"
 
 # HTML title tag content
 title = "NurseKit"
-#base_path = "enf-tool-box"
+base_path = "enf-tool-box"
 
 [web.watcher]
 
