@@ -12,3 +12,5 @@ dioxus = { version = "0.5", features = ["web", "router"] }
 
 # Debug
 dioxus-logger = "0.5.1"
+reqwest = { version = "0.12.7", features = ["blocking"] }
+serde_json = "1.0.128"

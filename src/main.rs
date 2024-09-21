@@ -3,6 +3,7 @@
 use dioxus::prelude::*;
 use dioxus_logger::tracing::{info, Level};
 
+use gemini::generate_gemini;
 use pages::braden::Braden;
 use pages::fugulin::Fugulin;
 use pages::gerador::Gerador;
@@ -10,6 +11,7 @@ use pages::glasgow::Glasgow;
 use pages::home::Home;
 use pages::morse::Morse;
 
+mod gemini;
 mod pages;
 
 #[derive(Clone, Routable, Debug, PartialEq)]
