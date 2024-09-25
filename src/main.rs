@@ -10,6 +10,7 @@ use pages::glasgow::Glasgow;
 use pages::home::Home;
 use pages::morse::Morse;
 
+mod model;
 mod pages;
 
 #[derive(Clone, Routable, Debug, PartialEq)]
