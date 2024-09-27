@@ -1,16 +1,22 @@
 use reqwest::Client;
 use serde_json::{from_str, json, Value};
 
+use crate::system::system_prompt;
+
 pub async fn model(prompt: String) -> Result<String, Box<dyn std::error::Error>> {
     let client = Client::new();
     let url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyC2bvEKYQJ_ubfZ2gW5evT7tl5fSfGv61I";
+
+    let system = system_prompt();
+
+    let full_prompt = format!("{} {}", system, prompt);
 
     let request_body = json!({
        "contents":[
            {
                "parts": [
                    {
-                       "text": prompt
+                       "text": full_prompt
                    }
                ]
            }

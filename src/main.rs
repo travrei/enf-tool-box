@@ -12,6 +12,7 @@ use pages::morse::Morse;
 
 mod model;
 mod pages;
+mod system;
 
 #[derive(Clone, Routable, Debug, PartialEq)]
 enum Route {
