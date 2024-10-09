@@ -1,6 +1,7 @@
 use crate::model::model;
 use dioxus::{prelude::*, web::WebEventExt};
 use dioxus_logger::tracing::info;
+use crate::system::system_prompt;
 
 pub fn Gerador() -> Element {
     //SSVV
@@ -26,9 +27,12 @@ pub fn Gerador() -> Element {
         let web_event = event.web_event();
         web_event.prevent_default();
 
+        let system_prompt = system_prompt();
+
         let prompt = format!(
-            "Paciente Estado geral: {}, Queixas: {}, Torax: {}, Abdome: {}, Membros: {}, Eliminações: {}, Lesões: {}. 
+            "{} Estado geral: {}, Queixas: {}, Torax: {}, Abdome: {}, Membros: {}, Eliminações: {}, Lesões: {}.
             SSVV: {}mmhg; {}irpm; {}bpm; {}ºC, {}%",
+            system_prompt,
             estgeral(),
             queixas(),
             torax(),
@@ -52,7 +56,7 @@ pub fn Gerador() -> Element {
 
     rsx! {
         div { class: "container",
-            form { class: "container", onsubmit: on_submit,
+            form {onsubmit: on_submit,
                 div { class: "promtcont",
                     h3 { "Informações Gerais" }
                     input {

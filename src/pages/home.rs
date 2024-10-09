@@ -19,7 +19,7 @@ pub fn Home() -> Element {
                 Link { to: Route::Fugulin {}, class: "button", "Fugulin" }
                 Link { to: Route::Glasgow {}, class: "button", "Glasgow" }
                 Link { to: Route::Gerador {}, class: "button disable", "Gerador de Evolução (Em Breve)" }
-                Link { to: Route::Home {}, class: "button disable", "Diagnósticos de Enfermagem (Em Breve)" }
+                Link { to: Route::Diagnostico {}, class: "button disable", "Diagnósticos de Enfermagem (Em Breve)" }
             }
             div { class: "footitens",
                 button {
