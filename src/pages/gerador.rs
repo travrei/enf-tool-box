@@ -20,6 +20,8 @@ pub fn Gerador() -> Element {
     let mut eliminacoes = use_signal(|| String::new());
     let mut lesoes = use_signal(|| String::new());
 
+    let mut diversos = use_signal(|| String::new());
+
     let mut submitted_prompt = use_signal(|| String::new());
     let mut text = use_resource(move || model(submitted_prompt().to_string()));
 
@@ -31,7 +33,7 @@ pub fn Gerador() -> Element {
 
         let prompt = format!(
             "{} Estado geral: {}, Queixas: {}, Torax: {}, Abdome: {}, Membros: {}, Eliminações: {}, Lesões: {}.
-            SSVV: {}mmhg; {}irpm; {}bpm; {}ºC, {}%",
+            SSVV: {}mmhg; {}irpm; {}bpm; {}ºC, {}%; Outras informações: {}",
             system_prompt,
             estgeral(),
             queixas(),
@@ -44,7 +46,8 @@ pub fn Gerador() -> Element {
             fr(),
             fc(),
             temp(),
-            spo2()
+            spo2(),
+            diversos()
         );
 
         info!("Enviando Prompt: {}", prompt);
@@ -108,6 +111,13 @@ pub fn Gerador() -> Element {
                         value: "{lesoes}",
                         oninput: move |e| lesoes.set(e.value())
                     }
+                    input {
+                        class: "prompt",
+                        name: "Diversos",
+                        placeholder: "Outras Informações",
+                        value: "{diversos}",
+                        oninput: move |e| diversos.set(e.value())
+                    }
                 }
                 div { class: "promtcont",
                     h3 { "Sinais Vitais" }
@@ -147,17 +157,18 @@ pub fn Gerador() -> Element {
                         oninput: move |e| spo2.set(e.value())
                     }
                 }
+
                 input { r#type: "submit" }
             }
 
             div { class: "respostacont",
-                h1 { class: "resposta_titulo", "Resultado" }
+                h4 { class: "resposta_titulo", "Resultado" }
 
                 match &*text.read(){
                     Some(Ok(result)) => {info!("{result}"); rsx!{p{class:"resposta", "{result}"}}},
                     Some(Err(e)) => {info!("{e}"); rsx!{p{class:"resposta", "{e}"}}},
                     None => rsx!{p{class:"resposta", "Sem Texto até o momento!"}}
-                    }
+                }
             }
         }
     }

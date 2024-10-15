@@ -18,8 +18,8 @@ pub fn Home() -> Element {
                 Link { to: Route::Morse {}, class: "button", "Morse" }
                 Link { to: Route::Fugulin {}, class: "button", "Fugulin" }
                 Link { to: Route::Glasgow {}, class: "button", "Glasgow" }
-                Link { to: Route::Gerador {}, class: "button disable", "Gerador de Evolução (Em Breve)" }
-                Link { to: Route::Diagnostico {}, class: "button disable", "Diagnósticos de Enfermagem (Em Breve)" }
+                Link { to: Route::Gerador {}, class: "button", "Gerador de Evolução (Fase de Teste)" }
+                Link { to: Route::Diagnostico {}, class: "button", "Diagnósticos de Enfermagem (Fase de Teste)" }
             }
             div { class: "footitens",
                 button {
@@ -62,6 +62,8 @@ pub fn Home() -> Element {
                                 "https://www2.ufjf.br/neurologia/2018/12/11/escala-de-coma-de-glasgow-importancia-e-atualizacao-de-2018"
                             }
                         }
+                        h3{"Diagnósticos de Enfermagem:"}
+                        p{"HERDMAN, T. H.; KAMITSURU, S. (Org.). Diagnósticos de Enfermagem da NANDA-I: Definições e Classificação 2021-2023. Porto Alegre: Artmed, 2021."}
                     }
                 }
             }
