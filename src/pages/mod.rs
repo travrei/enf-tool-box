@@ -1,4 +1,5 @@
 pub(crate) mod braden;
+pub(crate) mod diagnostico;
 pub(crate) mod fugulin;
 pub(crate) mod gerador;
 pub(crate) mod glasgow;

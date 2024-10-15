@@ -1,3 +1,9 @@
+
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
 body {
     display: flex;
     background-color: rgb(248, 250, 240);
@@ -215,6 +221,68 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+}
+
+.promtcont {
+    display: -ms-flexbox;
+    flex-direction: column;
+
+    padding: 1%;
+    justify-content: space-between;
+}
+
+.prompt {
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    height: 3rem;
+    position: relative;
+    margin: 4px;
+    box-sizing: border-box;
+}
+
+.text-field{
+    position: absolute;
+    top: -10px;
+    left: 12px;
+    background-color: White;
+    padding: 0 4px;
+    font-size: 12px;
+    color: #757575
+}
+
+.prompt:focus{
+    outline: none;
+    border-color: #2196f3;
+    box-shadow: 0 0 0 2px rgba(33,150,243,0.2);
+}
+
+.respostacont {
+    background-color: #d9e7ca;
+
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 10%;
+    padding: 4%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.resposta_titulo {
+    color: #131f0d;
+    padding: 2px;
+    margin: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.resposta {
+    font-size: 1rem;
+    letter-spacing: 1px;
 }
 
 @media (max-width: 600px) {
