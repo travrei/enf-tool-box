@@ -1,7 +1,7 @@
 use crate::model::model;
+use crate::system::system_prompt;
 use dioxus::{prelude::*, web::WebEventExt};
 use dioxus_logger::tracing::info;
-use crate::system::system_prompt;
 
 pub fn Gerador() -> Element {
     //SSVV
@@ -158,7 +158,7 @@ pub fn Gerador() -> Element {
                     }
                 }
 
-                input { r#type: "submit" }
+                input {class:"button", r#type: "submit" }
             }
 
             div { class: "respostacont",

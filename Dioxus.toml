@@ -17,7 +17,7 @@ asset_dir = "assets"
 
 # HTML title tag content
 title = "NurseKit"
-base_path = "enf-tool-box"
+#base_path = "enf-tool-box"
 
 [web.watcher]
 
@@ -39,7 +39,10 @@ style = [
 ]
 
 # Javascript code file
-script = []
+script = [
+    #Service Worker
+    "serviceworker.js",
+]
 
 [web.resource.dev]
 
