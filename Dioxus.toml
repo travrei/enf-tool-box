@@ -39,10 +39,7 @@ style = [
 ]
 
 # Javascript code file
-script = [
-    #Service Worker
-    "serviceworker.js",
-]
+script = []
 
 [web.resource.dev]
 
