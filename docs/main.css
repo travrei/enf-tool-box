@@ -1,7 +1,5 @@
-
-
 html {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -243,20 +241,20 @@ footer {
     box-sizing: border-box;
 }
 
-.text-field{
+.text-field {
     position: absolute;
     top: -10px;
     left: 12px;
     background-color: White;
     padding: 0 4px;
     font-size: 12px;
-    color: #757575
+    color: #757575;
 }
 
-.prompt:focus{
+.prompt:focus {
     outline: none;
     border-color: #2196f3;
-    box-shadow: 0 0 0 2px rgba(33,150,243,0.2);
+    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
 }
 
 .respostacont {
@@ -265,7 +263,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    margin: 10%;
+    margin: 1.4%;
     padding: 4%;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
