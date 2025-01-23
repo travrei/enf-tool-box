@@ -22,10 +22,11 @@ style = [
     "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap",
     "https://fonts.googleapis.com/icon?family=Material+Icons",
     "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined",
+    "assets/css/materialize.css",
 ]
 
 # Javascript code file
-script = []
+script = ["assets/js/materialize.js"]
 
 [web.resource.dev]
 

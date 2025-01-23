@@ -8,28 +8,28 @@ pub fn Home() -> Element {
     let mut show_cafe = use_signal(|| false);
 
     rsx! {
-        div { class: "container",
+        div { class: "center-align",
             div {
                 h1 { class: "title", "NURSE KIT" }
                 h4 { class: "secondary_title", " Tudo que você precisa para cuidar com excelência!" }
             }
-            div { class: "items",
-                Link { to: Route::Braden {}, class: "button", "Braden" }
-                Link { to: Route::Morse {}, class: "button", "Morse" }
-                Link { to: Route::Fugulin {}, class: "button", "Fugulin" }
-                Link { to: Route::Glasgow {}, class: "button", "Glasgow" }
-                Link { to: Route::Gerador {}, class: "button", "Gerador de Evolução (Fase de Teste)" }
-                Link { to: Route::Diagnostico {}, class: "button", "Diagnósticos de Enfermagem (Fase de Teste)" }
+            div { class: "container row",
+                Link { to: Route::Braden {}, class: "teal lighten-1 col s12 btn z-depth-2", "Braden" }
+                Link { to: Route::Morse {}, class: "teal lighten-1 col s12 btn z-depth-2", "Morse" }
+                Link { to: Route::Fugulin {}, class: "teal lighten-1 col s12 btn z-depth-2", "Fugulin" }
+                Link { to: Route::Glasgow {}, class: "teal lighten-1 col s12 btn z-depth-2", "Glasgow" }
+                Link { to: Route::Gerador {}, class: "teal lighten-1 col s12 btn z-depth-2", "Gerador de Evolução (Fase de Teste)" }
+                Link { to: Route::Diagnostico {}, class: "teal lighten-1 col s12 btn z-depth-2", "Diagnósticos de Enfermagem (Fase de Teste)" }
             }
-            div { class: "footitens",
+            div { class: "page-footer blue darken-2",
                 button {
-                    class: "button_sec",
+                    class: "row s12 btn-flat white-text z-depth-2",
                     onclick: move |_| show_referencias.set(true),
                     span { class: "icons material-icons", "manage_search" }
                     "Referências"
                 }
                 button {
-                    class: "button_sec",
+                    class: "row s12 btn-flat white-text z-depth-2",
                     onclick: move |_| show_cafe.set(true),
                     "Compre-me um Café"
                     span { class: "icons material-icons", "local_cafe" }

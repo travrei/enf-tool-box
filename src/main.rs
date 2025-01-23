@@ -48,9 +48,10 @@ fn App() -> Element {
                 content: "width-device-width, initial-scale=1.0"
             }
         }
-        link { rel: "stylesheet", href: "main.css" }
-        link { rel: "manifest", href: "manifest.json" }
-        script { src: "sw.js" }
+        link { rel: "stylesheet", href: asset!("/assets/css/materialize.css") }
+        link { rel: "manifest", href: asset!("assets/manifest.json") }
+        script { src:  asset!("/assets/js/materialize.js")}
+        script { src: asset!("/assets/sw.js") }
         Router::<Route> {}
     }
 }

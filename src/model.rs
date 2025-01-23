@@ -3,7 +3,7 @@ use serde_json::{from_str, json, Value};
 
 pub async fn model(prompt: String) -> Result<String, Box<dyn std::error::Error>> {
     let client = Client::new();
-    let url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyCzgWmKk_rnmSVCPPMd-4LQgPU93Fa-nB8";
+    let url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=";
 
     let request_body = json!({
        "contents":[
