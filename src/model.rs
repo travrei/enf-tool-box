@@ -3,7 +3,7 @@ use serde_json::{from_str, json, Value};
 
 pub async fn model(prompt: String) -> Result<String, Box<dyn std::error::Error>> {
     let client = Client::new();
-    let url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyC2bvEKYQJ_ubfZ2gW5evT7tl5fSfGv61I";
+    let url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyCzgWmKk_rnmSVCPPMd-4LQgPU93Fa-nB8";
 
     let request_body = json!({
        "contents":[
@@ -26,6 +26,7 @@ pub async fn model(prompt: String) -> Result<String, Box<dyn std::error::Error>>
 
     // Get the response body as text
     let response_text = response.text().await?;
+    println!("Raw response: {}", response_text);
 
     // Deserialize the JSON string
     let response_json: Value = from_str(&response_text)?;
@@ -44,7 +45,8 @@ pub async fn model(prompt: String) -> Result<String, Box<dyn std::error::Error>>
         println!("{}", text);
         Ok(text.to_string())
     } else {
-        println!("Campo 'text' não encontrado ou não é uma string.");
-        Ok("Campo 'text' não encontrado ou não é uma string.".to_string())
+        let error_message = format!("Failed to parse response. Raw response: {}", response_text);
+        println!("{}", error_message);
+        Ok(error_message)
     }
 }

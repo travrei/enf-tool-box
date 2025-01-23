@@ -8,9 +8,21 @@ edition = "2021"
 
 [dependencies]
 
-dioxus = { version = "0.5", features = ["web", "router"] }
-reqwest = { version = "0.12.7", features = ["blocking", "json"] }
-serde_json = "1.0.128"
+dioxus = { version = "*", features = ["web", "router"] }
+reqwest = { version = "*", features = ["blocking", "json"] }
+serde_json = "*"
 
 # Debug
-dioxus-logger = "0.5.1"
+dioxus-logger = "*"
+
+[profile]
+
+[profile.wasm-dev]
+inherits = "dev"
+opt-level = 1
+
+[profile.server-dev]
+inherits = "dev"
+
+[profile.android-dev]
+inherits = "dev"

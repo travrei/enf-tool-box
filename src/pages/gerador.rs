@@ -26,7 +26,7 @@ pub fn Gerador() -> Element {
     let mut text = use_resource(move || model(submitted_prompt().to_string()));
 
     let on_submit = move |event: FormEvent| {
-        let web_event = event.web_event();
+        let web_event = event.as_web_event();
         web_event.prevent_default();
 
         let system_prompt = system_prompt();
